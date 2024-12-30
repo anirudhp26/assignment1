@@ -73,14 +73,6 @@ function App() {
                       <div className="checkmark"></div>
                     </div>
                   </label>
-                  {/* <input type='checkbox' className='checkbox' onChange={(e) => {
-                    if (e.target.checked) {
-                      setvalues([...values, tile.id]);
-                    } else {
-                      setvalues(values.filter(id => id !== tile.id));
-                    }
-                  }}
-                  /> */}
                 </div>
               )
             })
