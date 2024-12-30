@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [showSelectedItems, setShowSelectedItems] = useState(false);
-  const [values, setvalues] = useState([
+  const [allChecked, setAllChecked] = useState(false);
+
+  const [values, setValues] = useState([
     {
       id: 2,
       title: "Page 1",
@@ -25,13 +27,19 @@ function App() {
       checked: false,
     }
   ]);
+
+  useEffect(() => {
+    setAllChecked(values.every((cb) => cb.checked));
+  }, [values]);
+
   const handleCheckAll = () => {
-    const allChecked = values.every((cb) => cb.checked);
-    setvalues(values.map((cb) => ({ ...cb, checked: !allChecked })));
+    const newCheckedState = !allChecked;
+    setValues(values.map((cb) => ({ ...cb, checked: newCheckedState })));
+    setAllChecked(newCheckedState);
   };
 
   const handleCheckboxChange = (id) => {
-    setvalues(
+    setValues(
       values.map((cb) =>
         cb.id === id ? { ...cb, checked: !cb.checked } : cb
       )
@@ -46,7 +54,7 @@ function App() {
           <div className='tile'>
             <p className='title'>All pages</p>
             <label>
-              <input type="checkbox" className='checkbox' id="custom-checkbox" onClick={handleCheckAll} />
+              <input type="checkbox" className='checkbox' id="custom-checkbox" checked={allChecked} onClick={handleCheckAll} />
               <div className="checkbox-container">
                 <div className="checkmark"></div>
               </div>
