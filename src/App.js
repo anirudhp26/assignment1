@@ -46,7 +46,6 @@ function App() {
     );
   };
 
-  console.log(values);
   return (
     <div className="App">
       <div className='container'>
