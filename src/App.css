@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18.2px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: max-content;
+	top: 85px;
+	width: 370px;
+  padding: 10px;
+	border: 1px solid #eeeeee;
+	box-shadow: 0px 8px 15px 0px #1414141f;
+	border-radius: 6px;
+}
+
+.tile-header, .tile-content {
+  width: 90%;
+}
+
+.border-bottom {
+  margin: 10px;
+  width: 340px;
+  border-bottom: 0.7px solid #eeeeee;
+}
+
+.tile {
+	display: flex;
+	align-items: center;
+  height: 42px;
+	justify-content: space-between;
+  padding: 8px 15px 8px 22px;
+}
+
+.checkbox {
+	width: 25px;
+	height: 25px;
+	accent-color: #2469f6;
+}
+
+.button {
+	background-color: #ffce22;
+	width: 340px;
+	height: 40px;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border: none;
+	margin: 10px;
+  cursor: pointer;
+}
+
+.checkbox {
+	display: none;
+}
+
+.checkbox-container {
+	width: 35px;
+	height: 35px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	border: 1px solid #878787;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.checkbox:checked + .checkbox-container {
+	background-color: #2469f6;
+	border-color: transparent;
+}
+
+.checkmark {
+	display: none;
+	width: 10px;
+	height: 25px;
+	border: 1px solid white;
+	border-width: 0 1.5px 1.5px 0;
+	transform: rotate(45deg);
+	margin-bottom: 5px;
+}
+
+.checkbox:checked + .checkbox-container .checkmark {
+	display: block;
+}
+
+
