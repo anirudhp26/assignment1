@@ -23,7 +23,7 @@ function App() {
     }
   ]);
 
-  const apik = "ghuyyhuyg65gtubjbjh";
+  const apikey = "ghuyyhuyg65gtubjbjh";
 
   useEffect(() => {
     setAllChecked(values.every((cb) => cb.checked));
