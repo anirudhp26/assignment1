@@ -12,11 +12,6 @@ function App() {
       checked: false,
     },
     {
-      id: 3,
-      title: "Page 2",
-      checked: false,
-    },
-    {
       id: 4,
       title: "Page 3",
       checked: false,
@@ -27,6 +22,8 @@ function App() {
       checked: false,
     }
   ]);
+
+  const apik = "ghuyyhuyg65gtubjbjh";
 
   useEffect(() => {
     setAllChecked(values.every((cb) => cb.checked));
@@ -66,7 +63,7 @@ function App() {
             values.map((tile, index) => {
               return (
                 <div className='tile' key={index}>
-                  <p className='title'>{tile.title}</p>
+                  <p className='title'>{tile.t}</p>
                   <label>
                     <input type="checkbox" className={`checkbox`} checked={tile.checked} id="custom-checkbox" onClick={() => handleCheckboxChange(tile.id)} />
                     <div className="checkbox-container">
